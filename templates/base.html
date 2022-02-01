@@ -13,10 +13,20 @@
   {% endblock others %}
 </head>
 
-<body class="bg-black text-gray-100">
+<body class="bg-black text-gray-100 font-primary">
 {% block content %}
 
 {% endblock content %}
+<script>
+  const nav = document.querySelector('nav');
+  document.addEventListener('scroll', e => {
+  if (scrollY > 100) {
+    nav.classList.add('bg-gray-100');
+  } else {
+    nav.classList.remove('bg-gray-100');
+  }
+  });
+</script>
 
 </body>
 
