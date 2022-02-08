@@ -13,7 +13,6 @@ MOVIE_CHOICES = (('seasonal', 'Seasonal'), ('single', 'Single'))
 class CustomUser(AbstractUser):
     profiles = models.ManyToManyField('Profile', blank=True)
 
-
 class Profile(models.Model):
     name = models.CharField(max_length=225)
     age_limit = models.CharField(max_length=10, choices=AGE_CHOICES)
